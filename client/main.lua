@@ -76,6 +76,7 @@ local function smashVitrine(k)
                 disableCombat = true,
             }, {}, {}, {}, function() -- Done
                 TriggerServerEvent('qb-jewellery:server:vitrineReward', k)
+                TriggerServerEvent('ak4y-battlepass:taskCountAdd:premium', 1, 1)
                 TriggerServerEvent('qb-jewellery:server:setTimeout')
                 local camId = '31 | 32 | 33 | 34' exports['ps-dispatch']:VangelicoRobbery(camId)
                 TaskPlayAnim(ped, animDict, "exit", 3.0, 3.0, -1, 2, 0, 0, 0, 0)
